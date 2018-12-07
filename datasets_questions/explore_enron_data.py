@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+from __future__ import division
 """ 
     Starter code for exploring the Enron dataset (emails + finances);
     loads up the dataset (pickled dict of dicts).
@@ -18,5 +18,11 @@
 import pickle
 
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
-
-
+count = 0
+count1 = 0
+for person in enron_data.keys():
+    if enron_data[person]["total_payments"] == "NaN":
+        count += 1
+    count1 += 1
+percent = (count/count1) * 100
+print(percent)

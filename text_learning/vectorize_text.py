@@ -53,7 +53,7 @@ for name, from_person in [("sara", from_sara), ("chris", from_chris)]:
         ### ["sara", "shackleton", "chris", "germani"]
 
         for signature in ["sara", "shackleton", "chris", "germani"]:
-            text.replace(signature, "")
+            text = text.replace(signature, "")
 
         ### append the text to word_data
         word_data.append(text)
